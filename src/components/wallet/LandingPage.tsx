@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useWallet } from '@/contexts/WalletContext';
 import { Wallet, ArrowRight } from 'lucide-react';
 
@@ -52,6 +53,12 @@ const LandingPage: React.FC = () => {
               Zeinyra
             </span>
           </div>
+          <Link
+            to="/assessment"
+            className="text-sm font-medium text-[#00D4FF] hover:text-[#00FFA3] transition-colors"
+          >
+            Solidity Assessment
+          </Link>
         </div>
       </header>
 

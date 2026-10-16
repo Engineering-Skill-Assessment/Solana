@@ -9,6 +9,7 @@ import { WagmiProvider } from "wagmi";
 import { wagmiConfig } from "@/wagmi";  // created by WagmiAdapter in wagmi.ts
 import { EnvironmentProvider } from "@/contexts/EnvironmentContext";
 import Index from "./pages/Index";
+import AssessmentPage from "./pages/AssessmentPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
             <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
               <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/assessment" element={<AssessmentPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
